@@ -1,11 +1,12 @@
 const express = require('express')
-const postController = require('../controllers/control')
+const controller = require('../controllers/control')
 
 const router = express.Router()
 
-router.get("/", postController.getControl)
-router.post("/post", postController.createPost)
 
+router.get("/", controller.getControl)
+router.post("/create_sheet", controller.createSheet)
+//router.delete("/delete_all", controller.deleteAll)
 
 
 module.exports = router
