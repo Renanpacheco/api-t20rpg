@@ -1,8 +1,9 @@
+const { ObjectId } = require('mongodb');
 let Post = require('../models/post')
 
 
 exports.getControl = (req, res) => {
-    const posts = Post.find().select("_id title")
+    const posts = Post.find().select("_id name")
     .then(posts => {
         res. json({posts})
     })
@@ -18,7 +19,16 @@ exports.createSheet = (req, res) => {
     })
 };
 
-/*exports.deleteAll = (req, res) => {
-    const exclude = Post.find().select("_id");
-    fetch(exclude, { method:'DELETE'})
-};*/
+exports.delete = async(req, res) => {
+    try{
+        //const aux = await Post.find
+        await Post.deleteOne({"_id" : ObjectId("6554d909c2d1730a56d1b3f3")})
+        
+
+    }catch(err){
+        res.json(err)
+
+    }
+    
+    
+};
