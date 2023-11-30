@@ -1,5 +1,5 @@
 //MongoDB connect by instructions on site of MongoDB
-const uri = "mongodb+srv://renanp:VRihVBYlmnJ922oJ@initial.shnvjus.mongodb.net/?retryWrites=true&w=majority";
+const uri // Variable for your connection on mongo db
 
 
 // external imports
